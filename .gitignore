@@ -1,0 +1,13 @@
+*.csv
+*.xlsx
+*.pdf
+*.docx
+*.zip
+*.tar.gz
+*.png
+*.jpg
+*.lnk
+dataprocessor
+bak
+EDDtemplate
+data

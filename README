@@ -1,0 +1,13 @@
+# Instructions for Use
+
+# 1) Activate your environment
+source dataprocessor/Scripts/activate
+
+# 2) Install deps (if needed)
+pip install pandas openpyxl
+
+# 3) Run it (output excel file to a folder)
+python EDD-zipdataProcessorSimple.py --input-dir ./zips --output-dir ./out
+
+# Or by default save next to each ZIP:
+python EDD-zipdataProcessorSimple.py --input-dir ./zips
