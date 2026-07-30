@@ -39,7 +39,7 @@ def argument_parser():
     p = argparse.ArgumentParser(
         description="Create one Excel per ZIP (same base name), with three ordered data sheets. No Key sheet. No formatting. Reads all fields as text."
     )
-    p.add_argument("input_dir", type=Path, default=Path("."), help="Folder with ZIP files (default: current directory).")
+    p.add_argument("--input_dir", type=Path, default=Path("./data"), help="Folder with ZIP files (default: current directory).")
     p.add_argument("--glob", type=str, default="*.zip", help="Glob for ZIPs (default: *.zip).")
     p.add_argument("--output-dir", type=Path, default=None, help="Optional output folder; if omitted, saves next to each ZIP.")
     p.add_argument("--sep", type=str, default=",", help="Field delimiter for the text files (default: ',').")
