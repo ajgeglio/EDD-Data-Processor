@@ -11,3 +11,5 @@ dataprocessor
 bak
 EDDtemplate
 data
+*/__pycache__/
+*geojson
