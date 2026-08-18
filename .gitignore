@@ -13,3 +13,4 @@ EDDtemplate
 data
 */__pycache__/
 *geojson
+*archive*
