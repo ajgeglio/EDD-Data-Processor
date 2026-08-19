@@ -17,8 +17,8 @@ def assign_matrix(sample_id):
         return 'LE'
     elif sample_str in ['GROESBECK POND', 'COOPER-1', 'COOPER-2', 'UNDERDRAIN']:
         return 'WS'
-    elif sample_str in ['RECYCLING WELL', 'ELECTRIC WELL']:
-        return 'WG'
+    elif sample_str in ['RECYCLING WELL', 'Electric Well', 'Recycling Well', 'ELECTRIC WELL']:
+        return 'WP'
     # 3. QA/QC Samples
     elif sample_str in ['DUPLICATE A', 'DUPLICATE B', 'DUPLICATE C', 'DupA', 'DupB', 'DupC']:
         return 'WG'  # Field duplicates inherit parent matrix
@@ -56,20 +56,26 @@ edd_to_template_mapping = {
 }
 
 sample_id_dict = {
-    "Under Drain": "UNDERDRAIN",
-    'Underdrain': 'UNDERDRAIN',
-    "Leachate": "LEACHATE",
-    'Groesbeck Pond': 'GROESBECK POND',
-    'Recycle': 'RECYCLING WELL',
-    'Electric': 'ELECTRIC WELL',
-    'Cooper 1': 'COOPER-1',
-    'Cooper 2': 'COOPER-2',
-    'MW-3sr': 'MW-03sr',
+    "under drain": "UNDERDRAIN",
+    "underdrain": "UNDERDRAIN",
+    "leachate": "LEACHATE",
+    "groesbeck pond": "GROESBECK POND",
+    "groesbeck Stormwater pond": "GROESBECK POND",
+    "recycle": "RECYCLING WELL",
+    "electric": "ELECTRIC WELL",
+    "cooper 1": "COOPER-1",
+    "cooper #1": "COOPER-1",
+    "cooper 2": "COOPER-2",
+    'cooper #2': 'COOPER-2',
+    'mw-3sr': 'MW-03sr',
     'MW-3dr': 'MW-03dr',
     'MW-5sr': 'MW-05sr',
     'MW-5dr': 'MW-05dr',
+    'MW-5' : 'MW-05',
     'MW-6dr': 'MW-06dr',
     'MW-6sr': 'MW-06sr',
+    'MW-7' : 'MW-07',
+    'MW-8' : 'MW-08',
     "MW-9r" : "MW-09r",
     "P28r" : "P-28r",
     "P29r2" : "P-29r2",
@@ -131,13 +137,6 @@ edd_to_db_Prepmethods = {
 
 chemical_name_dict = {
     "Bicarbonate Alkalinity as CaCO3 at pH 4.5": "Alkalinity, bicarbonate, to pH 4.5",
-    "1,2-Dibromo-3-chloropropane (SIM)": "1,2-Dibromo-3-chloropropane",
-    "Bromoform (SIM)": "Bromoform",
-    'Methyl Iodide': 'Iodomethane',
-    "t-Butanol": "tert-Butanol",
-    "Xylenes": "Xylenes,total",
-    "Ethylene Dibromide": "1,2-Dibromoethane",
-    'trans-1,4-Dichloro-2-butene (SIM)': 'trans-1,4-Dichloro-2-butene',
 }
 
 lab_matrix_dict = {
