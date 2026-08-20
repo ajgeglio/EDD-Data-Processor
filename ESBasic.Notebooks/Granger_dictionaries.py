@@ -20,7 +20,7 @@ def assign_matrix(sample_id):
     elif sample_str in ['RECYCLING WELL', 'Electric Well', 'Recycling Well', 'ELECTRIC WELL']:
         return 'WP'
     # 3. QA/QC Samples
-    elif sample_str in ['DUPLICATE A', 'DUPLICATE B', 'DUPLICATE C', 'DupA', 'DupB', 'DupC']:
+    elif sample_str in ['DUPLICATE A', 'DUPLICATE B', 'DUPLICATE C', 'DupA', 'DupB', 'DupC', 'Duplicate A', 'Duplicate B', 'Duplicate C']:
         return 'WG'  # Field duplicates inherit parent matrix
     elif 'Blank' in sample_str:
         return 'WQ'  # Trip, Equipment, and Field blanks stay WQ
