@@ -14,3 +14,4 @@ data
 */__pycache__/
 *geojson
 *archive*
+*.ipynb_checkpoints
